@@ -1,28 +1,60 @@
 <!DOCTYPE html> 
 
 <html>
-
 	<head>
+		<!-- Basic Page Needs
+		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+		<meta charset="utf-8">
+		<title>data4pass's Rock, Paper, Scissors</title>
+		<meta name="description" content="Simple console-based Rock, Paper, Scissors game.">
+		<meta name="author" content="data4pass">
+	
+		<!-- Mobile Specific Metas
+		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<meta charset="UTF-8" />
-		<meta name="author" content="data4pass" />
-		<meta name="copyright" content="MIT License" />
-		<meta name="robots" content="index, follow" />
+		<!-- FONT
+		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+		<link href="https://fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
 
-		<title>Rock, Paper, Scissor</title>
+		<!-- CSS
+		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="css/skeleton.css">
+		<link rel="stylesheet" type="text/css" href="css/custom.css">
 
-		<!--[if lt IE 9 ]>
-			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-		<![endif]--> 
-
+		<!-- Favicon
+		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+		<link rel="icon" type="image/png" href="images/favicon.png">
 	</head>
 
-	<body class="" lang="en-US">
+	<body lang="en-US">
 
-		<script>
-    
-    </script>
+		<div class="container">
+			<div class="row customrow">
+				<div class="twelve columns customcol">
+					<h1>data4pass's</h1>
+					<h2>Rock, Paper, Scissors</h2>
 
+					<form>
+						<input class="button-primary" type="button" name="start" id="start" value="Start Game">
+					</form>
+
+					<p class="dir"><strong>Direction:</strong></p>
+					<p>
+						Press <code>Ctrl + Shift + K</code> or <code>Cmd + Shift + K</code> to show your browser's console.<br>
+						Click the button above to start the game.
+					</p>
+					<p><strong>Note: </strong>This game relies on Javascript and <code>alert()</code> dialogs, please have your browser enable Javascript and disable multiple-dialog disabler before playing the game.</p>
+				</div>
+			</div>
+		</div>
+
+		<!-- Javascript
+		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+		<script src="js/script.js" type="text/javascript"></script>
+
+		<!-- End Document
+	  	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
 	</body>
-
 </html>
