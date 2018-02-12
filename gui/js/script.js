@@ -9,17 +9,17 @@ function playGame(e){
 	let computerSelection = computerPlay();
 	analyzeGame(playerSelection, computerSelection);
 
-	document.querySelector(`.playerScore`).textContent = playerScore;
-	document.querySelector(`.compScore`).textContent = computerScore;
-
 	document.querySelector(`.playerHand`).textContent = playerSelection + ` vs `;
 	document.querySelector(`.compHand`).textContent = computerSelection + `: `;
 
+	document.querySelector(`.playerScore`).textContent = playerScore;
+	document.querySelector(`.compScore`).textContent = computerScore + `.`;
+
 	if(playerScore == 5){
-		alert(`You won.`);
+		document.querySelector(`.gameResult`).textContent = ` You won.`;
 	}
 	else if(computerScore == 5){
-		alert(`You lose`);
+		document.querySelector(`.gameResult`).textContent = ` You lose.`;
 	}
 	return;
 }
