@@ -18,7 +18,7 @@ function clicked(){
 		playerSelection = playerPlay();		// get R, P or S for human
 		computerSelection = computerPlay(); // get R, P or S for computer
 
-		if(playerSelection == `wrong`){ 	// reset the loop (hence the round) 
+		if(playerSelection == `wrong`){ 	// reset the loop (and thus the round) 
 			round--; continue; 				// if playerSelection is not
 		}									// rock, paper or scissors
 

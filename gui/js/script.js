@@ -8,19 +8,8 @@ function playGame(e){
 	let playerSelection = e.target.id;
 	let computerSelection = computerPlay();
 	analyzeGame(playerSelection, computerSelection);
-
-	document.querySelector(`.playerHand`).textContent = playerSelection + ` vs `;
-	document.querySelector(`.compHand`).textContent = computerSelection + `: `;
-
-	document.querySelector(`.playerScore`).textContent = playerScore;
-	document.querySelector(`.compScore`).textContent = computerScore + `.`;
-
-	if(playerScore == 5){
-		document.querySelector(`.gameResult`).textContent = ` You won.`;
-	}
-	else if(computerScore == 5){
-		document.querySelector(`.gameResult`).textContent = ` You lose.`;
-	}
+	updateProgress(playerSelection, computerSelection);
+	wrapGame();
 	return;
 }
 
@@ -72,6 +61,31 @@ function analyzeGame(playerSelection, computerSelection){
 	else{
 		console.log(`${playerSelection} vs ${computerSelection}: ERROR.`); //for unexpected throw (if there's any)
 		playerScore += 0; computerScore += 0;
+	}
+	return;
+}
+
+function updateProgress(playerSelection, computerSelection){
+	document.querySelector(`.playerHand`).textContent = playerSelection + ` vs `;
+	document.querySelector(`.compHand`).textContent = computerSelection + `: `;
+
+	document.querySelector(`.playerScore`).textContent = playerScore;
+	document.querySelector(`.compScore`).textContent = computerScore + `.`;
+	return;
+}
+
+function wrapGame(){
+	if(playerScore == 5){
+		document.querySelector(`.gameResult`).textContent = ` You win.`;
+		for(let i = 0; i < hand.length; i++){
+			hand[i].disabled = true;
+		}
+	}
+	else if(computerScore == 5){
+		document.querySelector(`.gameResult`).textContent = ` You lose.`;
+		for(let i = 0; i < hand.length; i++){
+			hand[i].disabled = true;
+		}
 	}
 	return;
 }
